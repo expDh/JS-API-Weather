@@ -1,5 +1,4 @@
-import { apiKey } from './config.js';
-
+const apiKey = "ef5c1a66cf8a1afc37c74b2029080cc9";
 
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=`;
 
