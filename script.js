@@ -1,4 +1,5 @@
-const apiKey = "ef5c1a66cf8a1afc37c74b2029080cc9";
+import { apiKey } from './config.js';
+
 
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=`;
 
@@ -17,13 +18,13 @@ async function checkWeather(city) {
     weather.style.display ="none";
   }
   const data=await response.json();
-  console.log(data,"data");
+  
 
   document.querySelector(".city").innerHTML = data.name;
   document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "&#8451";
   document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
   document.querySelector(".wind").innerHTML = data.wind.speed + "км/час";
-  console.log(data.weather[0].main)
+  
 
   if(data.weather[0].main == "Clear"){
     weatherIcon.className = "fa-solid fa-sun";
